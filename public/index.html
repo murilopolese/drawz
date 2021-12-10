@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DESENHO</title>
+    <style>
+      body {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      main {
+        margin: auto;
+      }
+      button {
+        border: none;
+        background: rgba(0, 0, 0, 0.025);
+        color: rgba(0, 0, 0, 0.5);
+        padding: 1em;
+        border-radius: 0.2em;
+        cursor: pointer;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div>
+      <button onclick="selectTool('line')">Line</button>
+      <button onclick="selectTool('spray')">Spray</button>
+      <button onclick="selectTool('brush')">Brush</button>
+    </div>
+    <div>
+      <button onclick="selectColor('#ff00ff')">Purple</button>
+      <button onclick="selectColor('#ff0055')">Red</button>
+      <button onclick="selectColor('#00ff55')">Green</button>
+      <button onclick="selectColor('#5500ff')">Blue</button>
+      <button onclick="selectColor('#ffff00')">Yellow</button>
+    </div>
+    <!-- <script>
+      var socket = io();
+
+      var form = document.getElementById('form');
+      var input = document.getElementById('input');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (input.value) {
+          socket.emit('chat message', input.value);
+          input.value = '';
+        }
+      });
+
+      socket.on('chat message', function(msg) {
+        console.log('chat message')
+        var item = document.createElement('li');
+        item.textContent = msg;
+        messages.appendChild(item);
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+    </script> -->
+  </body>
+</html>
