@@ -1,6 +1,6 @@
 let socket = io()
 
-let selectedTool = 'line'
+let selectedTool = 'brush'
 let selectedColor = '#ff0055'
 
 function selectTool(tool) {
